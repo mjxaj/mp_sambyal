@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebook, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { FaFacebook, FaEnvelope, FaPhone, FaYoutube, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -31,19 +31,40 @@ const Footer = () => {
                 href="https://m.facebook.com/mp.sambyal/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-white hover:text-primary transition-colors duration-300"
+                className="text-white hover:text-[#1877F2] transition-colors duration-300"
+                aria-label="Facebook"
               >
                 <FaFacebook className="text-2xl social-icon" />
               </a>
               <a 
+                href="https://youtube.com/@mohinderpratapsingh-j9r?si=74XBeQwEbQkSsGFq" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white hover:text-[#FF0000] transition-colors duration-300"
+                aria-label="YouTube"
+              >
+                <FaYoutube className="text-2xl social-icon" />
+              </a>
+              <a 
+                href="https://x.com/mp_sambyal?t=RzUGOQ3TJXR-Ce6yfL76dA&s=08" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white hover:text-gray-400 transition-colors duration-300"
+                aria-label="Twitter/X"
+              >
+                <FaTwitter className="text-2xl social-icon" />
+              </a>
+              <a 
                 href="mailto:mpratap0024@gmail.com" 
-                className="text-white hover:text-primary transition-colors duration-300"
+                className="text-white hover:text-[#D44638] transition-colors duration-300"
+                aria-label="Email"
               >
                 <FaEnvelope className="text-2xl social-icon" />
               </a>
               <a 
                 href="tel:+917006639985" 
-                className="text-white hover:text-primary transition-colors duration-300"
+                className="text-white hover:text-[#25D366] transition-colors duration-300"
+                aria-label="Phone"
               >
                 <FaPhone className="text-2xl social-icon" />
               </a>

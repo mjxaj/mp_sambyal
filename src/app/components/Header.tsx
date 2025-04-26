@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { FaFacebook } from 'react-icons/fa';
+import { FaFacebook, FaYoutube, FaTwitter } from 'react-icons/fa';
 
 const Header = () => {
   return (
@@ -22,15 +22,33 @@ const Header = () => {
             <p className="text-sm md:text-base opacity-80 mt-1">Samba District, Jammu and Kashmir</p>
           </div>
         </div>
-        <div className="flex items-center space-x-4">
+        <div className="flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-3">
           <a 
             href="https://m.facebook.com/mp.sambyal/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="flex items-center bg-white text-primary px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300"
+            className="flex items-center bg-white text-[#1877F2] px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300"
           >
             <FaFacebook className="mr-2 text-xl" />
-            <span>Connect on Facebook</span>
+            <span>Facebook</span>
+          </a>
+          <a 
+            href="https://youtube.com/@mohinderpratapsingh-j9r?si=74XBeQwEbQkSsGFq" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center bg-white text-[#FF0000] px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300"
+          >
+            <FaYoutube className="mr-2 text-xl" />
+            <span>YouTube</span>
+          </a>
+          <a 
+            href="https://x.com/mp_sambyal?t=RzUGOQ3TJXR-Ce6yfL76dA&s=08" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center bg-white text-black px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300"
+          >
+            <FaTwitter className="mr-2 text-xl" />
+            <span>Twitter</span>
           </a>
         </div>
       </div>
