@@ -36,18 +36,24 @@ const Footer = () => {
                 <FaFacebook className="text-2xl social-icon" />
               </a>
               <a 
-                href="mailto:contact@mpsambyal.com" 
+                href="mailto:mpratap0024@gmail.com" 
                 className="text-white hover:text-primary transition-colors duration-300"
               >
                 <FaEnvelope className="text-2xl social-icon" />
               </a>
               <a 
-                href="tel:+911234567890" 
+                href="tel:+917006639985" 
                 className="text-white hover:text-primary transition-colors duration-300"
               >
                 <FaPhone className="text-2xl social-icon" />
               </a>
             </div>
+            <p className="mb-2">
+              <strong>Mobile:</strong> +91-7006639985
+            </p>
+            <p className="mb-4">
+              <strong>Email:</strong> mpratap0024@gmail.com
+            </p>
             <p className="text-sm opacity-75">
               Feel free to reach out if you need any assistance or want to join me in my community service initiatives.
             </p>
