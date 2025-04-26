@@ -16,8 +16,13 @@ const merriweather = Merriweather({
 })
 
 export const metadata: Metadata = {
-  title: 'M.P. Sambyal - Personal Profile',
-  description: 'Personal profile of M.P. Sambyal from Jammu and Kashmir, known for social service and volunteer work.',
+  title: 'M.P. Sambyal - Social Worker & Volunteer',
+  description: 'Personal website for M.P. Sambyal, a dedicated social worker and volunteer from Samba District, Jammu and Kashmir.',
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
+  themeColor: '#4F46E5',
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({
@@ -26,11 +31,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${merriweather.variable}`}>
       <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" />
       </head>
-      <body className={`${inter.variable} ${merriweather.variable}`}>
+      <body>
         {children}
       </body>
     </html>
