@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { FaFacebook, FaYoutube, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaYoutube, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Header = () => {
   return (
@@ -49,6 +49,15 @@ const Header = () => {
           >
             <FaTwitter className="mr-2 text-xl" />
             <span>Twitter</span>
+          </a>
+          <a 
+            href="https://www.instagram.com/mpsambyal" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center bg-white text-[#C13584] px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300"
+          >
+            <FaInstagram className="mr-2 text-xl" />
+            <span>Instagram</span>
           </a>
         </div>
       </div>

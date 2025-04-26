@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebook, FaEnvelope, FaPhone, FaYoutube, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaEnvelope, FaPhone, FaYoutube, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -55,7 +55,16 @@ const Footer = () => {
                 <FaTwitter className="text-2xl social-icon" />
               </a>
               <a 
-                href="mailto:mpratap0024@gmail.com" 
+                href="https://www.instagram.com/mpsambyal" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white hover:text-[#C13584] transition-colors duration-300"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="text-2xl social-icon" />
+              </a>
+              <a 
+                href="mailto:mpratap0024@gmail.com?subject=Contact%20from%20Website&body=Hello%20M.P.%20Sambyal,%0A%0AI%20am%20contacting%20you%20from%20your%20website.%0A%0A" 
                 className="text-white hover:text-[#D44638] transition-colors duration-300"
                 aria-label="Email"
               >

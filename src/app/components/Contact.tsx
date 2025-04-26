@@ -1,6 +1,7 @@
 import React from 'react';
 import ContactForm from './ContactForm';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import InstagramQR from './InstagramQR';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaInstagram } from 'react-icons/fa';
 
 const Contact = () => {
   return (
@@ -44,6 +45,17 @@ const Contact = () => {
                 
                 <div className="flex items-start">
                   <div className="mt-1 mr-4 bg-primary/10 p-2 rounded-full">
+                    <FaInstagram className="text-[#C13584] text-xl" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-secondary">Instagram</h4>
+                    <p className="text-gray-600">@MPSAMBYAL</p>
+                    <p className="text-sm text-gray-500 mt-1">Follow me for updates on community activities</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="mt-1 mr-4 bg-primary/10 p-2 rounded-full">
                     <FaMapMarkerAlt className="text-primary text-xl" />
                   </div>
                   <div>
@@ -55,11 +67,13 @@ const Contact = () => {
               </div>
             </div>
             
-            <div className="p-4 bg-primary/5 rounded-lg border border-primary/20">
+            <div className="p-4 bg-primary/5 rounded-lg border border-primary/20 mb-6">
               <p className="text-gray-700">
                 <span className="font-semibold text-primary">Note:</span> I am dedicated to serving the people of Jammu & Kashmir through various social initiatives. Your message will be treated with utmost importance.
               </p>
             </div>
+            
+            <InstagramQR />
           </div>
           
           <ContactForm />
