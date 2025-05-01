@@ -5,24 +5,36 @@ import { FaArrowLeft, FaArrowRight, FaTimes } from 'react-icons/fa';
 
 const galleryImages = [
   {
-    src: "https://scontent.fnag4-1.fna.fbcdn.net/v/t39.30808-6/481154275_1929942314202067_915219229702217953_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=FAVmm1Ak-jIQ7kNvwH--KYY&_nc_oc=AdnvR-w3MiM0qoKq7fJiO2ST2kBQJY93NjeTR99p1gGP27YYYPj1W3FSzF5G8RM5MN5GkbAo95k-tmlWeoScGZGf&_nc_zt=23&_nc_ht=scontent.fnag4-1.fna&_nc_gid=MpagaJHB4HGCfB4YhFOCvQ&oh=00_AfHFoVBuvDYAe4-njQGDGs4XpHJK5yFxaVXwyFpIfyIbyQ&oe=68126B5E",
+    src: "/images/img1.jpg",
     alt: "M.P. Sambyal community service"
   },
   {
-    src: "https://scontent.fnag4-1.fna.fbcdn.net/v/t39.30808-6/481291682_1929942317535400_7453339729248935133_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=NL-bhB3Mm6UQ7kNvwFInvuX&_nc_oc=AdkHGEzn8QliUvoDhbfhjAVV2ReTqDBvfJlVrNbTA6tOQj3ost7Shek8pjKLRJax1CpbLQxbjf3WZTkHqvgKWQQR&_nc_zt=23&_nc_ht=scontent.fnag4-1.fna&_nc_gid=t-FF6PIZhEyK1WOx-ibuFQ&oh=00_AfGDhzZKZhMG6KI8R4dF9kngNe4z2wpkrsrvYIV-m7xNTA&oe=6812964A",
+    src: "/images/img2.jpg",
     alt: "Social work in Jammu & Kashmir"
   },
   {
-    src: "https://scontent.fnag4-1.fna.fbcdn.net/v/t39.30808-6/481898928_1931871780675787_1860350828383772032_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=WtYOH8TxEF0Q7kNvwFWw22g&_nc_oc=AdkDTDcmbFkNb4xGQwXKFQKyVR7wsPkVBKH5bIqnNLj9rrKw5Z5Hz6cZxAH-2kJKjxOLCDkpZis3VSviS8L4jKqu&_nc_zt=23&_nc_ht=scontent.fnag4-1.fna&_nc_gid=CnY3SVBr1iIyNIX7tBywDg&oh=00_AfHFhIn4gSHJyBF9QfM8ctKUSK4ZzFJTsAZH9_3R6wWyAg&oe=6812867D",
+    src: "/images/img3.jpg",
     alt: "Community engagement activities"
   },
   {
-    src: "https://scontent.fnag4-2.fna.fbcdn.net/v/t39.30808-6/475848853_1909131592949806_6588018433878462793_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=VZwN8Eu6_SAQ7kNvwEcWP61&_nc_oc=AdnrD5HBTTtA57cF7yaMhxOZoe-4ftvt8qyoRa-WsPdT3_mo0tLkj4ZJPENgPzrpGBGzsQg0GZQ_vHVEhA3lLw8k&_nc_zt=23&_nc_ht=scontent.fnag4-2.fna&_nc_gid=q-nGLhnuTHDdG11j3Y2Tew&oh=00_AfGcKtxhW2wSAqhzKtXBbzQrsSINMSfHVsRUEQbI_fBKmg&oe=681276E9",
+    src: "/images/img4.jpg",
     alt: "Volunteer work in Samba District"
   },
   {
-    src: "https://scontent.fnag4-3.fna.fbcdn.net/v/t39.30808-6/476096327_1908514966344802_6454450994809664051_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=flz-65v1XH8Q7kNvwG0AiwU&_nc_oc=AdlAe9uOSeNQPNq4lycXJKm6U6FJLmTq8SL-sEp2gIGU-W0hx2dtu-eOTjeyudv3kcJFOnzOEG4bjj81sX7pfpEn&_nc_zt=23&_nc_ht=scontent.fnag4-3.fna&_nc_gid=Se8-STYlFMGxn7ommwBdFQ&oh=00_AfFtRqGCUCylsFDuCbFS6CKfhBrPS8wnCnlj1wK4jlKc_w&oe=68128864",
+    src: "/images/img5.jpg",
     alt: "Social initiatives in Jammu & Kashmir"
+  },
+  {
+    src: "/images/img6.jpg",
+    alt: "Community service activities"
+  },
+  {
+    src: "/images/img7.jpg",
+    alt: "Social work initiatives"
+  },
+  {
+    src: "/images/img8.jpg",
+    alt: "Volunteer activities in J&K"
   }
 ];
 
@@ -59,11 +71,7 @@ const Gallery = () => {
     <section id="gallery" className="py-12 md:py-16 px-4 md:px-8 lg:px-16 bg-white">
       <div className="container mx-auto">
         <div className="flex flex-col items-center justify-center mb-6 md:mb-8">
-          <img 
-            src="/jk-logo.png" 
-            alt="Jammu & Kashmir Logo" 
-            className="h-12 md:h-16 mb-3"
-          />
+         
           <h2 className="text-2xl md:text-3xl font-bold text-primary text-center">Photo Gallery</h2>
         </div>
         
