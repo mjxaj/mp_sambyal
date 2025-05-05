@@ -12,6 +12,7 @@ const Header = () => {
 
   return (
     <header className="bg-gradient-to-r from-primary to-secondary text-white py-6 px-4 md:px-8 lg:px-16 relative">
+      <div className="container flex">
       <div className="container mx-auto">
         {/* Top Section with Logo and Mobile Menu Toggle */}
         <div className="flex items-center justify-between mb-4 md:mb-0">
@@ -30,6 +31,8 @@ const Header = () => {
               <p className="text-sm md:text-base lg:text-lg opacity-90">Social Worker & Volunteer</p>
             </div>
           </div>
+
+          
 
           {/* Mobile Menu Toggle */}
           <button 
@@ -102,6 +105,15 @@ const Header = () => {
               </button>
             </div>
             
+            {/* J&K Logo in Mobile Menu */}
+            <div className="flex justify-center mb-6">
+              <img 
+                src="/jk-logo.png" 
+                alt="Jammu & Kashmir Logo" 
+                className="h-24"
+              />
+            </div>
+            
             <div className="flex flex-col space-y-4">
               <a 
                 href="https://m.facebook.com/mp.sambyal/" 
@@ -151,6 +163,15 @@ const Header = () => {
             </div>
           </div>
         )}
+        
+      </div>
+      <div className="hidden md:block">
+            <img 
+              src="/jk-logo.png" 
+              alt="Jammu & Kashmir Logo" 
+              className="h-24 md:h-32 lg:h-40 mb-4"
+            />
+          </div>
       </div>
     </header>
   );

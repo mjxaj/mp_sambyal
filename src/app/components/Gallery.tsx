@@ -71,7 +71,11 @@ const Gallery = () => {
     <section id="gallery" className="py-12 md:py-16 px-4 md:px-8 lg:px-16 bg-white">
       <div className="container mx-auto">
         <div className="flex flex-col items-center justify-center mb-6 md:mb-8">
-         
+        <img 
+             src="/jk-logo.png" 
+             alt="Jammu & Kashmir Logo" 
+             className="h-24 md:h-32 lg:h-40 mb-4"
+           />
           <h2 className="text-2xl md:text-3xl font-bold text-primary text-center">Photo Gallery</h2>
         </div>
         
