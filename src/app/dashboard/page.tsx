@@ -8,9 +8,14 @@ import { FaPlus, FaEdit, FaTrash, FaSignOutAlt, FaNewspaper, FaImage, FaVideo, F
 
 const ADMIN_EMAIL = "mpratap0024@gmail.com"; // CHANGE THIS TO YOUR ADMIN EMAIL
 
-// Cloudinary configuration
-const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/dyevpfv8a/image/upload";
-const CLOUDINARY_PRESET = "grain_community";
+// Cloudinary configuration from environment variables
+const CLOUDINARY_URL = process.env.NEXT_PUBLIC_CLOUDINARY_URL;
+const CLOUDINARY_PRESET = process.env.NEXT_PUBLIC_CLOUDINARY_PRESET;
+
+// Validate environment variables
+if (!CLOUDINARY_URL || !CLOUDINARY_PRESET) {
+  console.error('Cloudinary configuration missing. Please check your environment variables.');
+}
 
 export default function DashboardPage() {
   const [news, setNews] = useState<any[]>([]);
@@ -56,6 +61,10 @@ export default function DashboardPage() {
   };
 
   const uploadToCloudinary = async (file: File): Promise<string> => {
+    if (!CLOUDINARY_URL || !CLOUDINARY_PRESET) {
+      throw new Error('Cloudinary configuration missing');
+    }
+
     const formData = new FormData();
     formData.append('file', file);
     formData.append('upload_preset', CLOUDINARY_PRESET);
