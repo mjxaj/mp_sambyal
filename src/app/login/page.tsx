@@ -5,7 +5,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import { FaUser, FaLock, FaSignInAlt } from "react-icons/fa";
 
-const ADMIN_EMAIL = "lucifer.the.gamer.001@gmail.com"; // CHANGE THIS TO YOUR ADMIN EMAIL
+const ADMIN_EMAIL = "mpratap0024@gmail.com"; 
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");

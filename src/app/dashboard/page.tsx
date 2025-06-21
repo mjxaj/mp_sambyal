@@ -6,7 +6,7 @@ import { collection, addDoc, getDocs, updateDoc, deleteDoc, doc, Timestamp, quer
 import { auth, db } from "../../firebase";
 import { FaPlus, FaEdit, FaTrash, FaSignOutAlt, FaNewspaper, FaImage, FaVideo, FaSave, FaTimes, FaUpload } from "react-icons/fa";
 
-const ADMIN_EMAIL = "lucifer.the.gamer.001@gmail.com"; // CHANGE THIS TO YOUR ADMIN EMAIL
+const ADMIN_EMAIL = "mpratap0024@gmail.com"; // CHANGE THIS TO YOUR ADMIN EMAIL
 
 // Cloudinary configuration
 const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/dyevpfv8a/image/upload";
