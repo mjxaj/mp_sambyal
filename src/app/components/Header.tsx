@@ -2,9 +2,11 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { FaFacebook, FaYoutube, FaTwitter, FaInstagram, FaBars, FaTimes } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const router = useRouter();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -50,7 +52,7 @@ const Header = () => {
           <p className="text-xs md:text-sm opacity-80 mt-0 mb-4 md:mb-6">Samba District, Jammu and Kashmir - The Crown of INDIA</p>
           
           {/* Social Media Links - Desktop */}
-          <div className="hidden md:flex flex-wrap gap-2">
+          <div className="hidden md:flex flex-wrap gap-2 items-center">
             <a 
               href="https://m.facebook.com/mp.sambyal/" 
               target="_blank" 
@@ -87,6 +89,13 @@ const Header = () => {
               <FaInstagram className="mr-1.5 text-lg" />
               <span>Instagram</span>
             </a>
+            {/* Login Button */}
+            <button
+              onClick={() => router.push('/login')}
+              className="ml-4 bg-white text-blue-700 px-4 py-1.5 rounded-lg font-semibold hover:bg-blue-100 transition duration-300 text-sm"
+            >
+              Login
+            </button>
           </div>
         </div>
 
@@ -165,7 +174,13 @@ const Header = () => {
               <span className="font-medium">Follow on Instagram</span>
             </a>
           </div>
-          
+          {/* Login Button at bottom of mobile menu */}
+          <button
+            onClick={() => { setMenuOpen(false); router.push('/login'); }}
+            className="mt-8 bg-white text-blue-700 px-4 py-2 rounded-lg font-semibold hover:bg-blue-100 transition duration-300"
+          >
+            Login
+          </button>
           <div className="mt-auto text-center text-white opacity-80 text-sm">
             <p className="mb-2">Samba District, Jammu and Kashmir</p>
             <p>J&K - The Crown of INDIA</p>
