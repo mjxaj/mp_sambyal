@@ -44,10 +44,15 @@ export default function DashboardPage() {
 
   const fetchNews = async () => {
     setLoading(true);
-    const q = query(collection(db, "news"), orderBy("date", "desc"));
-    const querySnapshot = await getDocs(q);
-    setNews(querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
-    setLoading(false);
+    try {
+      const q = query(collection(db, "news"), orderBy("date", "desc"));
+      const querySnapshot = await getDocs(q);
+      setNews(querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+    } catch (error) {
+      console.error('Error fetching news:', error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
@@ -62,24 +67,32 @@ export default function DashboardPage() {
 
   const uploadToCloudinary = async (file: File): Promise<string> => {
     if (!CLOUDINARY_URL || !CLOUDINARY_PRESET) {
+      console.error('Cloudinary config:', { CLOUDINARY_URL, CLOUDINARY_PRESET });
       throw new Error('Cloudinary configuration missing');
     }
 
-    const formData = new FormData();
-    formData.append('file', file);
-    formData.append('upload_preset', CLOUDINARY_PRESET);
+    try {
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('upload_preset', CLOUDINARY_PRESET);
 
-    const response = await fetch(CLOUDINARY_URL, {
-      method: 'POST',
-      body: formData,
-    });
+      const response = await fetch(CLOUDINARY_URL, {
+        method: 'POST',
+        body: formData,
+      });
 
-    if (!response.ok) {
-      throw new Error('Upload failed');
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('Cloudinary upload failed:', response.status, errorText);
+        throw new Error(`Upload failed: ${response.status}`);
+      }
+
+      const data = await response.json();
+      return data.secure_url;
+    } catch (error) {
+      console.error('Upload error:', error);
+      throw error;
     }
-
-    const data = await response.json();
-    return data.secure_url;
   };
 
   const handleAdd = async (e: React.FormEvent) => {

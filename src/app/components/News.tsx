@@ -26,10 +26,16 @@ export default function News() {
   useEffect(() => {
     const fetchNews = async () => {
       setLoading(true);
-      const q = query(collection(db, "news"), orderBy("date", "desc"));
-      const querySnapshot = await getDocs(q);
-      setNews(querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
-      setLoading(false);
+      try {
+        const q = query(collection(db, "news"), orderBy("date", "desc"));
+        const querySnapshot = await getDocs(q);
+        setNews(querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+      } catch (error) {
+        console.error('Error fetching news:', error);
+        // You might want to set an error state here
+      } finally {
+        setLoading(false);
+      }
     };
     fetchNews();
   }, []);
